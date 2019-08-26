@@ -1,0 +1,27 @@
+<div class="container-fluid" >
+  <div class="col-md-3">
+    <app-sidebartask [categoryName]="name" (jinal)="onSideBarClick($event)"></app-sidebartask>
+  </div>
+  <div class="col-md-9">
+<div class="row">
+<table class="table" >
+  <thead>
+    <th>Task Id</th>
+    <th>Task title</th>
+    <th>Status</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arr1" >
+      <td>{{item.Id}}</td>
+      <td>{{item.Title}}</td>
+      <td>{{item.Status}}</td>
+       <td><button class="btn btn-info" (click)="onTaskDelete(item)" >Delete</button>
+      <button class="btn btn-info" (click)="onTaskEdit(item)"  >edit</button>
+      <!-- </td> -->
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+</div>
